@@ -4,19 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <h1>AppAnimal - Aplicativo Animal</h1>
-    <form action="">
-        <input type="text" name="animal" placeholder="nome do animal">
-        <input type="submit" name="gravar" placeholder="gravar">
+    <form id="form_animal">
+        <input type="text" id="nome" placeholder="nome do Animal">
+        <input type="submit" id="nome" value="gravar">
     </form>
-    <ul>
-        <li></li>
-        <li></li>
-        <li></li>
+    <h2>animais cadastrados</h2>
+    <ul id="lista_animais">
     </ul>
 </body>
 </html>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="index.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>

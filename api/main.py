@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 app = FastAPI()
-origins = ['http://localhost:5500']
+origins = ['http://127.0.0.1:5500']
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
@@ -9,6 +9,13 @@ app.add_middleware(
     allow_methods=['*'],
     allow_headers=['*']
 )
+cadastrado = []
 @app.get('/animais')
 def teste():
-    return('ola')
+    return cadastrado
+
+@app.post('/animais')
+def criar(data:dict):
+    cadastrado.append({'id':data['id'], 'nome':data['nome']})
+    return 'animais cadastrado'
+    
